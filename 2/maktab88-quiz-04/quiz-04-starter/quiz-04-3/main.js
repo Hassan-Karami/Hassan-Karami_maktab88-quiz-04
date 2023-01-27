@@ -42,7 +42,10 @@ renderTable();
 //delete Item
 function removeItemsOfHeader(){
 	let headerName= window.location.search.split("?")[1];
-	console.log(headerName)
+	// if(headerName==="name"){
+
+	// }
+
 	tableBody.innerHTML="";
 	tableHead.innerHTML="";
 	tours= tours.map(element=>{

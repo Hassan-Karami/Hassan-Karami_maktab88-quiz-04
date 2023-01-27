@@ -37,3 +37,20 @@ const renderTable = () => {
 };
 
 renderTable();
+
+//filter by property and it's value
+function filterByPropertyAndValue(){
+	tableHead.innerHTML="";
+	tableBody.innerHTML="";
+	
+	property= window.location.search.substring(1).split("=")[0];
+	value=window.location.search.substring(1).split("=")[1];
+	console.log(property);
+	console.log(value);
+	tours= tours.filter(el=>{
+		return el[property] === value;
+	})
+	
+	renderTable();
+}
+filterByPropertyAndValue();
