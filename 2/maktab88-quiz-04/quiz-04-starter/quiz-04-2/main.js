@@ -50,10 +50,12 @@ function sortBy(headerName){
 	tableBody.innerHTML="";
 	tableHead.innerHTML="";
 	tours= tours.sort((a,b)=>{
-		current=a[headerName].toString();
-		next= b[headerName].toString();
-	
-		current.localeCompare(next,undefined,{numeric:true,sensivity:'base'});
+		current=a[headerName].toString().toLowerCase();
+		next= b[headerName].toString().toLowerCase();
+		
+		return current.localeCompare(next,undefined,{numeric:true,sensivity:'base'});
+		console.log();
+
 	})
 	renderTable();
 	

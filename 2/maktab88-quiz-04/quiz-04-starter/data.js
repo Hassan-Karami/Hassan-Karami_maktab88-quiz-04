@@ -1,4 +1,4 @@
-const tours = [
+let tours = [
 	{
 		id: 0,
 		location: 'Miami, USA',
