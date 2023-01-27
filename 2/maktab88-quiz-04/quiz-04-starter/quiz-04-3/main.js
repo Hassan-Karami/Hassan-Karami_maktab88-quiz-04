@@ -37,3 +37,19 @@ const renderTable = () => {
 };
 
 renderTable();
+
+
+//delete Item
+function removeItemsOfHeader(){
+	let headerName= window.location.search.split("?")[1];
+	console.log(headerName)
+	tableBody.innerHTML="";
+	tableHead.innerHTML="";
+	tours= tours.map(element=>{
+		 delete element[headerName];
+		 return element;
+	});
+	renderTable()
+
+}
+removeItemsOfHeader();
